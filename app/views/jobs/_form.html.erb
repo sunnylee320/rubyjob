@@ -21,13 +21,29 @@
   </div>
   <div class="field">
     <%= f.label :job_type %><br>
-    
-    <%= f.radio_button :Full_time %>
-    <%= f.label :Full_time,"Full-time" %>
+    <%= f.radio_button :job_type,"Full-time"%>
+    <%= f.label :job_type,"Full-time" %>
+    <%= f.radio_button :job_type,"Part-time" %>
+    <%= f.label :job_type,"Part-time" %>
+    <%= f.radio_button :job_type,"Contract"  %>
+    <%= f.label :job_type,"Contract" %>
+    <%= f.radio_button :job_type,"Internship" %>
+    <%= f.label :job_type,"Internship" %>
+    <%= f.radio_button :job_type,"Other" %>
+    <%= f.label :job_type,"Other" %>
   </div>
   <div class="field">
     <%= f.label :occupation %><br>
-    <%= f.text_field :occupation %>
+    <%= f.radio_button :occupation,"Web back-end"%>
+    <%= f.label :occupation,"Web back-end" %>
+    <%= f.radio_button :occupation,"Web front-end" %>
+    <%= f.label :occupation,"Web front-end" %>
+    <%= f.radio_button :occupation,"Web-design"  %>
+    <%= f.label :occupation,"Web-design" %>
+    <%= f.radio_button :occupation,"QA/Testing" %>
+    <%= f.label :occupation,"QA/Testing" %>
+    <%= f.radio_button :occupation,"Other" %>
+    <%= f.label :occupation,"Other" %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
@@ -48,11 +64,10 @@
   <div class="field">
     <%= f.label :deadline %><br>
     <%= f.date_select :deadline %>
+    <%= f.check_box :deadline %>
+    <%= f.label :deadline,"forever" %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

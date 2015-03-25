@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Jobs</h1>
-
+<h1>Jobs List</h1>
+<br/>
+<%= link_to 'Post a New Job', new_job_path, class:'btn btn-success btn-lg' %>
+<br/><br/>
 <table class='table table-hover'>
   <thead>
     <tr>
@@ -30,6 +32,6 @@
 </table>
 
 <br>
-<%= paginate @namecards, :theme => 'twitter-bootstrap-3' ,:pagination_class => "pagination-sm" %>
+<%= paginate @jobs, :theme => 'twitter-bootstrap-3' ,:pagination_class => "pagination-sm" %>
 <br>
-<%= link_to 'Post a New Job', new_job_path, class:'btn btn-success btn-lg' %>
+
