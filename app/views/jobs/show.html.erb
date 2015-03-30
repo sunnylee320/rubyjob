@@ -1,45 +1,33 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-
-<p>
-  <strong>Job type:</strong>
-  <%= @job.job_type %>
-</p>
-
-<p>
-  <strong>Occupation:</strong>
-  <%= @job.occupation %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @job.url %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<p>
-  <strong>Apply information:</strong>
-  <%= @job.apply_information %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @job.deadline %>
-</p>
-
+<H2><%= @job.title %></H2>
+<table >
+  <tr>
+    <td> <strong>Job type:</strong></td>
+    <td><%= @job.job_type %></td>
+    <td><strong>Occupation:</strong></td>
+    <td><%= @job.occupation %></td>
+  </tr>
+  <tr>
+    <td><strong>Company Name:</strong></td>
+    <td><%= @job.company_name %> </td>
+    <td><strong>Location:</strong></td>
+    <td><%= @job.location %></td>
+  </tr>
+  <tr>
+    <td><strong>Url:</strong></td>
+    <td colspan="3"><%= @job.url %></td>
+  </tr>
+  <tr>
+    <td><strong>Description:</strong></td>
+    <td colspan="3"><%= @job.description %></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Apply information:</strong><br/>
+      <%= @job.apply_information %>
+    </td>
+  </tr>
+</table>
 
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
