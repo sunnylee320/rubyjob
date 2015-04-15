@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <H2><%= @job.title %></H2>
-<table >
+<p>Posted: <%= @job.created_at.to_date %> Deadline:<%= @job.deadline %> </p>
+<div class="container">
+  <table class="table">
   <tr>
     <td> <strong>Job type:</strong></td>
     <td><%= @job.job_type %></td>
@@ -15,7 +17,7 @@
   </tr>
   <tr>
     <td><strong>Url:</strong></td>
-    <td colspan="3"><%= @job.url %></td>
+    <td colspan="3"><a href="<%= @job.url %>"><%= @job.url %></a></td>
   </tr>
   <tr>
     <td><strong>Description:</strong></td>
@@ -28,6 +30,8 @@
     </td>
   </tr>
 </table>
+</div>
+
 
 
 <%= link_to 'Edit', edit_job_path(@job) %> |

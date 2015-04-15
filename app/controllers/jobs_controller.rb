@@ -4,7 +4,8 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.page(params[:page]).per(5)
+    @jobs = Job.where('deadline >= ?' ,Time.now.to_date ).page(params[:page]).per(5)
+    
   end
 
   # GET /jobs/1
@@ -28,7 +29,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to jobs_path, notice: 'Job was successfully created.' }
         format.json { render :show, status: :created, location: @job }
       else
         format.html { render :new }
